@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Raj B | AI & Data Science Portfolio</title>
+    <meta name="description" content="Portfolio of Sanjay Raj B, AI & Data Science Student. Turning raw data into intelligent decisions.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Trail -->
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">SRB</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Glowing Orbs (Global Background Elements) -->
+    <div class="orb-cyan orb-1"></div>
+    <div class="orb-purple orb-2"></div>
+    <div class="orb-cyan orb-3"></div>
+    <div class="orb-purple orb-4"></div>
+
+    <!-- Section 1: Hero -->
+    <section id="hero" class="section hero-section">
+        <canvas id="particleCanvas"></canvas>
+        <div class="grid-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-name">Sanjay Raj B</h1>
+            <h2 class="typewriter-container">
+                <span id="typewriter"></span><span class="cursor">|</span>
+            </h2>
+            <p class="tagline">"Turning raw data into intelligent decisions"</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-filled">Contact Me</a>
+                <a href="assets/resume.pdf" target="_blank" class="btn btn-glass">Download Resume</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- Section 2: About -->
+    <section id="about" class="section reveal">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="glass-card about-bio">
+                    <p>Hello! I'm Sanjay Raj B, an enthusiastic B.Tech Artificial Intelligence & Data Science student. I am passionate about discovering patterns in data and building intelligent systems that solve real-world problems. My journey is fueled by an insatiable curiosity for machine learning, data engineering, and creating scalable AI solutions.</p>
+                    <div class="tag-pill mt-4 inline-block">Currently Studying at Jeppiaar Engineering College</div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-ring glass-card">
+                        <svg viewBox="0 0 36 36" class="circular-chart cyan">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="80, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage">8.0</text>
+                            <text x="18" y="26" class="stat-label">CGPA</text>
+                        </svg>
+                    </div>
+                    <div class="stat-ring glass-card">
+                        <svg viewBox="0 0 36 36" class="circular-chart purple">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="91.17, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage">91%</text>
+                            <text x="18" y="26" class="stat-label">HSC</text>
+                        </svg>
+                    </div>
+                    <div class="stat-ring glass-card counter-ring">
+                        <div class="counter-content">
+                            <span class="counter-number">4+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Education -->
+    <section id="education" class="section reveal">
+        <div class="section-container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-node"></div>
+                    <div class="glass-card timeline-content">
+                        <h3>B.Tech AI & Data Science</h3>
+                        <h4>Jeppiaar Engineering College</h4>
+                        <p class="timeline-date">2023 – 2027</p>
+                        <div class="tag-pill warning-pill inline-block mt-2">CGPA: 8.0</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-node"></div>
+                    <div class="glass-card timeline-content">
+                        <h3>Higher Secondary Certificate (HSC)</h3>
+                        <h4>SVM Hr Sec School</h4>
+                        <p class="timeline-date">Completed</p>
+                        <div class="tag-pill warning-pill inline-block mt-2">Score: 91.17%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Projects -->
+    <section id="projects" class="section reveal">
+        <div class="section-container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card-wrapper">
+                    <div class="glass-card project-card">
+                        <div class="card-front">
+                            <div class="project-icon">📊</div>
+                            <h3>Customer Cohort Analysis</h3>
+                            <p>Analyzing customer retention and behavior.</p>
+                        </div>
+                        <div class="card-back glass-card-dark">
+                            <h3>Customer Cohort Analysis</h3>
+                            <p>A comprehensive cohort analysis tool to track customer retention, engagement patterns, and lifetime value over time.</p>
+                            <div class="tech-stack">
+                                <span class="tag-pill">Python</span>
+                                <span class="tag-pill">Pandas</span>
+                                <span class="tag-pill">Matplotlib</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card-wrapper">
+                    <div class="glass-card project-card">
+                        <div class="card-front">
+                            <div class="project-icon">✈️</div>
+                            <h3>Travel Insurance Prediction</h3>
+                            <p>Predicting insurance purchase likelihood.</p>
+                        </div>
+                        <div class="card-back glass-card-dark">
+                            <h3>Travel Insurance Prediction</h3>
+                            <p>Machine learning classification model predicting whether a customer will purchase travel insurance based on demographic and behavioral data.</p>
+                            <div class="tech-stack">
+                                <span class="tag-pill">ML</span>
+                                <span class="tag-pill">Scikit-learn</span>
+                                <span class="tag-pill">Classification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card-wrapper">
+                    <div class="glass-card project-card">
+                        <div class="card-front">
+                            <div class="project-icon">🛡️</div>
+                            <h3>Credit Card Fraud Detection</h3>
+                            <p>Identifying anomalous transactions in real-time.</p>
+                        </div>
+                        <div class="card-back glass-card-dark">
+                            <h3>Credit Card Fraud Detection</h3>
+                            <p>Anomaly detection system built to identify potentially fraudulent credit card transactions among highly imbalanced datasets.</p>
+                            <div class="tech-stack">
+                                <span class="tag-pill">Anomaly Detection</span>
+                                <span class="tag-pill">ML</span>
+                                <span class="tag-pill">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card-wrapper">
+                    <div class="glass-card project-card">
+                        <div class="card-front">
+                            <div class="project-icon">💬</div>
+                            <h3>Real-Time Chat Application</h3>
+                            <p>Scalable, low-latency messaging platform.</p>
+                        </div>
+                        <div class="card-back glass-card-dark">
+                            <h3>Real-Time Chat Application</h3>
+                            <p>A full-stack real-time communication platform supporting multi-user chat rooms, persistent history, and instant message delivery.</p>
+                            <div class="tech-stack">
+                                <span class="tag-pill">Node.js</span>
+                                <span class="tag-pill">Socket.io</span>
+                                <span class="tag-pill">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Skills -->
+    <section id="skills" class="section reveal">
+        <div class="section-container">
+            <h2 class="section-title">Skills</h2>
+            
+            <h3 class="subsection-title">Technical Expertise</h3>
+            <div class="hex-grid">
+                <!-- Technical skills -->
+                <div class="hex-wrap" style="--stagger: 1"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">🐍</span><span class="label">Python</span></div></div></div>
+                <div class="hex-wrap" style="--stagger: 2"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">☕</span><span class="label">Java</span></div></div></div>
+                <div class="hex-wrap" style="--stagger: 3"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">⚡</span><span class="label">C++</span></div></div></div>
+                <div class="hex-wrap" style="--stagger: 4"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">🗄️</span><span class="label">SQL</span></div></div></div>
+                <div class="hex-wrap" style="--stagger: 5"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">🧠</span><span class="label">Machine Learning</span></div></div></div>
+                <div class="hex-wrap" style="--stagger: 6"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">🏗️</span><span class="label">Data Structures</span></div></div></div>
+                <div class="hex-wrap" style="--stagger: 7"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">🌐</span><span class="label">Web Development</span></div></div></div>
+                <div class="hex-wrap" style="--stagger: 8"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">🐼</span><span class="label">Pandas</span></div></div></div>
+                <div class="hex-wrap" style="--stagger: 9"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">🟢</span><span class="label">Node.js</span></div></div></div>
+                <div class="hex-wrap" style="--stagger: 10"><div class="glass-card hexagon"><div class="hex-content"><span class="icon">🍃</span><span class="label">MongoDB</span></div></div></div>
+            </div>
+
+            <h3 class="subsection-title mt-lg">Soft Skills</h3>
+            <div class="soft-skills-grid">
+                <div class="tag-pill skill-pill">🤝 Teamwork</div>
+                <div class="tag-pill skill-pill">⏱️ Time Management</div>
+                <div class="tag-pill skill-pill">🏆 Leadership</div>
+                <div class="tag-pill skill-pill">💬 Effective Communication</div>
+                <div class="tag-pill skill-pill">🧠 Critical Thinking</div>
+                <div class="tag-pill skill-pill">🔍 Problem Solving</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Achievements -->
+    <section id="achievements" class="section reveal">
+        <div class="section-container">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="achievements-list">
+                <div class="glass-card badge-card">
+                    <div class="stripe"></div>
+                    <div class="icon">🎓</div>
+                    <div class="content">
+                        <h3>Data Science for Beginners — GUVI-HCL</h3>
+                        <p>Python & ML Training</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card badge-card">
+                    <div class="stripe"></div>
+                    <div class="icon">💼</div>
+                    <div class="content">
+                        <h3>AIML Internship</h3>
+                        <p>8Queens Software Technologies</p>
+                    </div>
+                </div>
+
+                <div class="glass-card badge-card">
+                    <div class="stripe"></div>
+                    <div class="icon">🎓</div>
+                    <div class="content">
+                        <h3>Big Data 301</h3>
+                        <p>Infosys Springboard Certification</p>
+                    </div>
+                </div>
+
+                <div class="glass-card badge-card">
+                    <div class="stripe"></div>
+                    <div class="icon">🚀</div>
+                    <div class="content">
+                        <h3>Real-World Projects</h3>
+                        <p>Machine Learning & Data Analytics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Contact -->
+    <section id="contact" class="section reveal">
+        <div class="section-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="glass-card contact-panel">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="icon">✉️</span>
+                            <a href="mailto:sanjayrajb7@gmail.com" class="contact-link" id="email-link">sanjayrajb7@gmail.com</a>
+                            <button class="copy-btn" id="copy-email" title="Copy to clipboard">📋</button>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <a href="tel:+917708866917" class="contact-link">+91 7708866917</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="glass-btn-circle" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="glass-btn-circle" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="mailto:sanjayrajb7@gmail.com" class="glass-btn-circle" aria-label="Email">
+                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top glass-card" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </a>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
