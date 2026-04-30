@@ -692,7 +692,6 @@ nav.scrolled {
 }
 
 .project-card-wrapper {
-    perspective: 1000px;
     min-height: 280px;
 }
 
@@ -700,35 +699,40 @@ nav.scrolled {
     position: relative;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 280px;
+    border-radius: 16px;
+    overflow: hidden;
     cursor: pointer;
 }
 
-.project-card-wrapper:hover .project-card {
-    transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-    position: absolute;
+/* Front face — always visible */
+.card-front {
+    position: relative;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
-    border-radius: 16px;
+    min-height: 280px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-}
-
-.card-front {
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: transform 0.4s ease;
+    z-index: 1;
+}
+
+.project-card:hover .card-front {
+    transform: scale(0.97);
 }
 
 .project-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-icon {
+    transform: scale(1.15);
 }
 
 .card-front h3 {
@@ -741,27 +745,77 @@ nav.scrolled {
     font-size: 0.95rem;
 }
 
+/* Overlay — slides up on hover */
 .card-back {
-    transform: rotateY(180deg);
-    justify-content: space-between;
+    position: absolute;
+    inset: 0;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(
+        to top,
+        rgba(5, 11, 24, 0.97) 0%,
+        rgba(10, 20, 45, 0.92) 60%,
+        rgba(0, 212, 255, 0.06) 100%
+    );
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 212, 255, 0.18);
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    z-index: 2;
+}
+
+.project-card:hover .card-back {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card-back h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--accent-cyan);
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .card-back p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
 }
 
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-bottom: 1.1rem;
+}
+
+/* GitHub CTA button */
+.project-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #050b18;
+    background: var(--accent-cyan);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    width: 100%;
+    letter-spacing: 0.02em;
+}
+
+.project-link-btn:hover {
+    background: #33ddff;
+    box-shadow: 0 0 18px rgba(0, 212, 255, 0.45);
+    transform: translateY(-2px);
 }
 
 /* ==========================================================================
